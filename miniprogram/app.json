@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
@@ -12,13 +11,14 @@
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
     "pages/addTextNote/addTextNote",
-    "pages/main/main"
+    "pages/main/main",
+    "pages/changeTextNote/changeTextNote"
   ],
   "window": {
-   "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#cce6ff",
-  "navigationBarTitleText": "ColorUI",
-  "navigationBarTextStyle": "white"
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cce6ff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationBarTextStyle": "white"
   },
   "usingComponents": {
     "cu-custom": "colorui/components/cu-custom"

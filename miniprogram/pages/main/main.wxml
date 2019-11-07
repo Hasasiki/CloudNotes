@@ -98,7 +98,7 @@
 
 
 <!--文字笔记卡片页面-->
-<view data-text="{{item._id}}" class="cu-card dynamic {{isCard?'no-card':''}}" wx:for="{{ne}}" bindlongpress='showModal' data-target="DialogModal1">
+<view data-text="{{item._id}}" class="cu-card dynamic {{isCard?'no-card':''}}" wx:for="{{ne}}" wx:key bindlongpress='showModal' bindtap="change" data-target="DialogModal1">
   <view class="cu-item shadow">
     <view><text>\n</text></view>
     <view><text>\n</text></view>

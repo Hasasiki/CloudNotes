@@ -1,9 +1,9 @@
-<!--pages/addTextNote/addTextNote.wxml-->
+<!--miniprogram/pages/changeTextNote/changeTextNote.wxml-->
 <!--表单-->
-<form bgColor="#fef2ce">
+<form bgColor="#fef2ce" wx:for="{{ne}}" wx:key>
   <view class="cu-form-group">
 		<view class="title">标题</view>
-		<input placeholder="" bindinput="titleInput">{{item.title}}</input>
+		<input placeholder="" bindinput="titleInput" value="{{item.title}}"></input>
 	</view>
 
   <view class="cu-form-group">
@@ -12,7 +12,7 @@
 	</view>
 
   <view class="cu-form-group">
-		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="笔记..." bindinput="noteInput">{{item.note}}</textarea>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="" bindinput="noteInput" value="{{item.note}}"></textarea>
 	</view>
 </form>
 
@@ -21,3 +21,4 @@
 <view class="cu-bar btn-group">
     <button class="cu-btn bg-green shadow-blur round lg" bindtap="saveNote">保存</button>
   </view>
+

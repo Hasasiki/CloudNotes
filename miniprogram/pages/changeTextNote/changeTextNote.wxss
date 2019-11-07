@@ -1,0 +1,4 @@
+/* miniprogram/pages/changeTextNote/changeTextNote.wxss */
+page {
+  background: #fef2ce;
+}

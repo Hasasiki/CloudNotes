@@ -23,7 +23,17 @@ Page({
   hideModal(e) {
     this.setData({
       modalName: null
+    });
+  },
+  //修改笔记
+  change:function(e){
+    //获取卡片data-text，传入打开的addTextNotes页面
+    console.log(e.currentTarget.dataset.text);
+    var id = e.currentTarget.dataset.text;
+    wx.navigateTo({
+      url: '/pages/changeTextNote/changeTextNote?id=' + id,
     })
+
   },
   //删除笔记
   deleteAndRefresh(e){

@@ -8,7 +8,31 @@ Page({
    */
   data: {
     intitle:"",
-    note:""
+    note:"",
+    ne: [],  //这是一个空的数组，等下获取到云数据库的数据将存放在其中
+  },
+  onLoad : function(options){
+    var id = options.id;
+    
+    if(id==null){
+      console.log("there is no id transpt here");
+    }else{
+      //将传进来的值放进title和note里
+      console.log(id);
+      const db = wx.cloud.database({ 
+        env: 'cloudnotes-4pv4u'
+      })
+      db.collection('textNotes').where({
+        _id: id
+      }).get({
+        success: res => {
+          console.log(res.data) 
+          this.setData({
+            ne: res.data
+          })
+        }
+      })
+    }
   },
 
   //保存笔记到本地缓存
