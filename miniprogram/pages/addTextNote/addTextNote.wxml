@@ -1,0 +1,23 @@
+<!--pages/addTextNote/addTextNote.wxml-->
+<!--表单-->
+<form bgColor="#fef2ce">
+  <view class="cu-form-group">
+		<view class="title">标题</view>
+		<input placeholder="" bindinput="titleInput"></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title">置顶</view>
+		<switch></switch>
+	</view>
+
+  <view class="cu-form-group">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="笔记..." bindinput="noteInput"></textarea>
+	</view>
+</form>
+
+
+<!--保存button-->
+<view class="cu-bar btn-group">
+    <button class="cu-btn bg-green shadow-blur round lg" bindtap="saveNote">保存</button>
+  </view>

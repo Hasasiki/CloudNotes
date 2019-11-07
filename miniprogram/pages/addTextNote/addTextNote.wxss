@@ -1,0 +1,4 @@
+/* pages/addTextNote/addTextNote.wxss */
+page {
+  background: #fef2ce;
+}

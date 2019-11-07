@@ -1,0 +1,65 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">ColorUI 空白模板</view>
+</cu-custom>
+<!--
+
+
+-->
+<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
+  <view class="flex justify-center">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
+    <block wx:else>
+      <view class='text-center'>
+        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+        <view class="padding">{{userInfo.nickName}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="text-center margin-top">
+  <text class="text-grey text-xl">{{motto}}</text>
+</view>
+<view>
+  <button bindtap="jumpPage">to main page</button>
+</view>
+
+<view>
+  <button bindtap="jumpPage1">to add page</button>
+</view>
+
+
+
+<!--底部导航栏-->
+  <view class="cu-bar tabbar bg-white" style="bottom:0;">
+
+    <view class="action text-green">
+      <view class="cuIcon-homefill"></view> 首页
+    </view>
+
+    <view class="action text-gray add-action">
+      <button class="cu-btn cuIcon-add bg-green shadow" bindtap="showModal" data-target="RadioModal"></button>
+      添加
+    </view>
+   
+    <view class="action text-gray">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      我的
+    </view>
+  </view>
+  <!--添加笔记模态窗口-->
+<view class="cu-modal {{modalName=='RadioModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog" catchtap>
+    <radio-group class="block">
+      <view class="cu-list menu text-left">
+        <view class="cu-item" wx:for="{{5}}" wx:key>
+          <label class="flex justify-between align-center flex-sub">
+            <view class="flex-sub">Item {{index +1}}</view>
+            <radio class="round"></radio>
+          </label>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+</view>
