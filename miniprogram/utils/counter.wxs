@@ -1,0 +1,17 @@
+//计算日期差
+var counter = function (strDate, format = "yyyy-MM-dd hh:mm:ss") {
+  console.log(strDate);
+  var nowTime = getDate().getTime();//现在时间（时间戳）
+  console.log(nowTime);
+  var endTime = getDate(strDate).getTime();//结束时间（时间戳）
+  var time = (endTime - nowTime) / 1000;
+  // 获取天、时、分、秒
+  var day = parseInt(time / (60 * 60 * 24) + 1);
+  console.log(day);
+  // console.log(day + "," + hou + "," + min + "," + sec)
+  //day = that.timeFormin(day);
+  console.log(day);
+  return day;
+}
+//将函数暴露出去
+module.exports.counter = counter;

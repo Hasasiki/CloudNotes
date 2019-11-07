@@ -12,12 +12,14 @@
     "pages/openapi/cloudid/cloudid",
     "pages/addTextNote/addTextNote",
     "pages/main/main",
-    "pages/changeTextNote/changeTextNote"
+    "pages/changeTextNote/changeTextNote",
+    "pages/seachResults/seachResults",
+    "pages/countdown/countdown"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#cce6ff",
-    "navigationBarTitleText": "ColorUI",
+    "navigationBarTitleText": "Notes",
     "navigationBarTextStyle": "white"
   },
   "usingComponents": {

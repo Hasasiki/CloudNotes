@@ -1,0 +1,4 @@
+/* miniprogram/pages/seachResults/seachResults.wxss */
+page {
+  background: #e7ebed;
+}

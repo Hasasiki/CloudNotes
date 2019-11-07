@@ -1,10 +1,4 @@
-<cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">ColorUI 空白模板</view>
-</cu-custom>
-<!--
 
-
--->
 <view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
   <view class="flex justify-center">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
@@ -16,38 +10,22 @@
     </block>
   </view>
 </view>
+
+
 <view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
+  <text class="text-grey text-xl">Hi~ {{userInfo.nickName}}</text>
 </view>
-<view>
-  <button bindtap="jumpPage">to main page</button>
-</view>
-
-<view>
-  <button bindtap="jumpPage1">to add page</button>
+<view class="text-center margin-top">
+  <text class="text-grey text-xl">欢迎来到云笔记，请点击来开始吧~</text>
 </view>
 
 
+  <view class="padding flex flex-direction">
+  <button class="cu-btn bg-grey lg" bindtap="jumpPage">开始！</button>
+</view>
 
-<!--底部导航栏-->
-  <view class="cu-bar tabbar bg-white" style="bottom:0;">
 
-    <view class="action text-green">
-      <view class="cuIcon-homefill"></view> 首页
-    </view>
 
-    <view class="action text-gray add-action">
-      <button class="cu-btn cuIcon-add bg-green shadow" bindtap="showModal" data-target="RadioModal"></button>
-      添加
-    </view>
-   
-    <view class="action text-gray">
-      <view class="cuIcon-my">
-        <view class="cu-tag badge"></view>
-      </view>
-      我的
-    </view>
-  </view>
   <!--添加笔记模态窗口-->
 <view class="cu-modal {{modalName=='RadioModal'?'show':''}}" bindtap="hideModal">
   <view class="cu-dialog" catchtap>

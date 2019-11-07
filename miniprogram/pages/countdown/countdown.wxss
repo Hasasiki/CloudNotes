@@ -1,0 +1,23 @@
+/* miniprogram/pages/countdown/countdown.wxss */
+page {
+  background: #e8f4d9;
+}
+.kouviewList{
+ background-color: #F7F7F7;
+}
+.kouview{
+ height:170px;
+ margin-top:5px;
+  
+}
+.kouviews{
+ height:150px;
+ margin-top:5px;
+  
+}
+.time-title{
+ float:left;width:20%;text-align:center;color:#45BCE8
+}
+.picker-text{
+ text-align:center;
+}

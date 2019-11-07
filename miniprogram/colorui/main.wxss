@@ -2293,6 +2293,13 @@ button.icon.lg {
 	background-color: var(--white);
 	overflow: hidden;
 }
+/*文字卡片css*/
+.cu-card.dynamic.textcard>.cu-item {
+	display: block;
+	background-color: var(--yellowLight);
+	overflow: hidden;
+}
+
 /*时间卡片css*/
 .cu-card.dynamic.timecard>.cu-item {
 	display: block;

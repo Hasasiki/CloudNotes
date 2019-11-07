@@ -1,0 +1,51 @@
+<!--miniprogram/pages/seachResults/seachResults.wxml-->
+<!--搜索操作条 -->
+<view class="cu-bar search bg-white">
+    <view class="cu-avatar round" style="background-image:url(https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqUD4gEIE8eCvZsURFJDEJc18GBEnrq5SgibcdqLqOmSMFnCu77ZdRbWB9iaSqFm2ZIk3PlPmyu6SHQ/132)" bindtap="showModal" data-target="DrawerModalL"></view>
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索笔记、图片" confirm-type="search" bindconfirm="onSearch"></input>
+    </view>
+    <view class="action">
+      <text>淄博</text>
+      <text class="cuIcon-triangledownfill"></text>
+    </view>
+</view>
+
+<!--文字笔记卡片页面-->
+<view data-text="{{item._id}}" class="cu-card dynamic textcard{{isCard?'no-card':''}}" wx:for="{{ne}}" wx:key bindlongpress='showModal' bindtap="change" data-target="DialogModal1">
+  <view class="cu-item shadow">
+    <view><text>\n</text></view>
+    <view><text>\n</text></view>
+    <!--文本笔记内容输入处-->
+    <view class="text-content">
+        {{item.note}}
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text>
+      <text>{{item.data}}</text>
+    </view>
+  </view>
+</view>
+
+<!--删除询问模态框-->
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content"></view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      是否删除此笔记？
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="deleteAndRefresh">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>

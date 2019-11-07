@@ -73,5 +73,10 @@ Page({
     wx.navigateTo({
       url: '/pages/addTextNote/addTextNote',
     })
+  },
+  jumpPage2: function () {
+    wx.navigateTo({
+      url: '/pages/countdown/countdown',
+    })
   }
 })
